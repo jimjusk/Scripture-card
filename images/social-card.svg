@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="#ffffff"/>
+  
+  <!-- 渐变背景装饰 -->
+  <path d="M0 0 L1200 0 L1200 200 Q600 250 0 200 Z" fill="#4A90E2" opacity="0.1"/>
+  
+  <!-- Logo -->
+  <g transform="translate(100, 180)">
+    <g transform="scale(0.5)">
+      <rect width="128" height="128" rx="24" fill="#4A90E2"/>
+      <path d="M32 40H96V52H70V88H58V52H32V40Z" fill="white"/>
+      <rect x="28" y="64" width="72" height="36" rx="4" stroke="white" stroke-width="4" fill="none"/>
+    </g>
+    <text x="80" y="44" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text'" font-size="40" font-weight="600" fill="#1d1d1f">金句卡片</text>
+  </g>
+  
+  <!-- 标语 -->
+  <text x="100" y="300" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text'" font-size="56" font-weight="700" fill="#1d1d1f">一键生成精美文字卡片</text>
+  
+  <!-- 描述 -->
+  <text x="100" y="380" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text'" font-size="32" fill="#666666">轻松将网页中的精彩内容转换为精美的分享卡片</text>
+  
+  <!-- 预览图 -->
+  <g transform="translate(600, 180)">
+    <!-- 这里可以放置扩展界面的预览图 -->
+    <rect width="500" height="300" rx="12" fill="#f8f9fa" stroke="#e5e7eb"/>
+  </g>
+</svg> 

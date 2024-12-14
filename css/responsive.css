@@ -1,0 +1,62 @@
+/* 平板设备 */
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .header {
+    margin-bottom: 60px;
+  }
+
+  .content h1 {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .features {
+    gap: 16px;
+  }
+}
+
+/* 移动设备 */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .feature img {
+    margin: 0 16px 0 0;
+  }
+} 

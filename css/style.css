@@ -1,0 +1,359 @@
+/* 基础样式 */
+:root {
+  --primary-color: #4a90e2;
+  --text-color: #1d1d1f;
+  --secondary-text: #86868b;
+  --background: #ffffff;
+  --hover-color: #357abd;
+  --section-background: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-color);
+  background: var(--background);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 头部样式 */
+.header {
+  background: var(--background);
+  padding: 16px 0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo svg {
+  height: 32px;
+  width: auto;
+}
+
+/* 适配暗色主题 */
+@media (prefers-color-scheme: dark) {
+  .logo svg text {
+    fill: #ffffff;  /* 暗色主题下文字颜色改为白色 */
+  }
+}
+
+.nav .download-btn {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav .download-btn:hover {
+  color: var(--hover-color);
+}
+
+/* 主要内容区样式 */
+.main {
+  flex: 1;
+  background: var(--section-background);
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+}
+
+.main .container {
+  width: 100%;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 标题区域布局 */
+.header-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+
+.title-area {
+  flex: 1;
+}
+
+.content h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--secondary-text);
+  margin-bottom: 0;
+  max-width: 500px;
+  text-align: left;
+}
+
+.cta {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 32px;
+  background: var(--background);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.primary-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.primary-btn::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 4h12v-2H6v2z"/></svg>') no-repeat center;
+  background-size: contain;
+}
+
+.primary-btn:hover {
+  background: var(--hover-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+.version {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary-text);
+  font-size: 15px;
+  padding-left: 4px;
+}
+
+.version::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.version-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.browser-support {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondary-text);
+  font-size: 14px;
+}
+
+.browser-icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.browser-icon.chrome {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%234a90e2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle fill="%234a90e2" cx="12" cy="12" r="4"/></svg>');
+}
+
+.browser-icon.edge {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="%234a90e2" d="M20.91 11.53C20.41 6.39 16.04 2 10.9 1.5 7.88 1.22 5.19 2.16 3.14 3.88 1.54 5.21 0.45 7.12 0.14 9.19c-0.56 3.72 1.2 7.36 4.04 9.44 2.61 1.91 6.14 2.15 9.04 0.89 2.09-0.91 3.88-2.61 4.73-4.73 0.99-2.47 0.85-5.4-0.85-7.68-1.2-1.62-3.14-2.75-5.19-2.89-2.33-0.14-4.66 0.85-6 2.75-0.85 1.2-1.34 2.75-1.2 4.24 0.14 1.48 0.85 2.89 2.05 3.88 0.85 0.71 1.91 1.06 2.96 1.06 1.06 0 2.05-0.35 2.89-1.06 0.71-0.56 1.2-1.34 1.48-2.19"/></svg>');
+}
+
+.browser-text {
+  white-space: nowrap;
+}
+
+/* 预览区域样式 */
+.preview-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.preview-img {
+  width: 80%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* 功能特点 */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+/* 安装说明区域 */
+.install-section {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 40px;
+}
+
+.install-basic {
+  flex: none;
+  width: 240px;
+  padding: 16px;
+  background: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.install-detail {
+  flex: 1;
+  padding: 16px;
+  background: var(--background);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.install-basic h2,
+.install-detail h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.install-basic ol,
+.install-detail ul {
+  padding-left: 20px;
+}
+
+.install-basic li,
+.install-detail li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.install-detail kbd {
+  background: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+/* FAQ 样式 */
+.faq {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e9ecef;
+}
+
+.faq dt {
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.faq dd {
+  color: var(--secondary-text);
+  margin-bottom: 16px;
+  margin-left: 0;
+}
+
+/* 优化移动端显示 */
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .content h1 {
+    font-size: 36px;
+  }
+  
+  .install-guide {
+    margin-top: 32px;
+    padding: 20px;
+  }
+} 
+
+/* Footer 样式 */
+.footer {
+  background: var(--background);
+  padding: 16px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+  text-align: center;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
